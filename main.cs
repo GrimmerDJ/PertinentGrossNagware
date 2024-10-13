@@ -4,14 +4,11 @@ class Program
 {
     static void Main()
     {
-        // Declare constants for valid temperature range
         const int MinTemperature = -30;
         const int MaxTemperature = 130;
 
-        // Array to store temperatures
         int[] temperatures = new int[5];
 
-        // Get 5 valid temperatures from user input
         for (int i = 0; i < temperatures.Length; i++)
         {
             int temp;
@@ -33,7 +30,6 @@ class Program
             temperatures[i] = temp;
         }
 
-        // Determine the pattern of temperature changes
         bool gettingWarmer = true;
         bool gettingCooler = true;
 
@@ -50,7 +46,6 @@ class Program
             }
         }
 
-        // Display the appropriate message
         if (gettingWarmer)
         {
             Console.WriteLine("Getting warmer");
@@ -64,14 +59,12 @@ class Program
             Console.WriteLine("It’s a mixed bag");
         }
 
-        // Display the temperatures in the order they were entered
         Console.WriteLine("\nTemperatures entered:");
         foreach (int temp in temperatures)
         {
             Console.WriteLine(temp);
         }
 
-        // Calculate and display the average of the temperatures
         double total = 0;
         foreach (int temp in temperatures)
         {
